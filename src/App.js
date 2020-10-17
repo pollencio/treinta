@@ -1,11 +1,10 @@
 import React from 'react'
 
+// Pages
+import Login from 'components/pages/Login'
+
 function App() {
-  return (
-    <>
-      <center>Holi 😎</center>
-    </>
-  )
+  return <Login />
 }
 
 export default App
