@@ -10,7 +10,7 @@ const rightImgPath = '/img/graphics/login.png'
 function Login() {
   return (
     <SemiHalfTemplate>
-      <Left className='left'>Holi</Left>
+      <Left className='left'>Login</Left>
 
       <Right className='right' />
     </SemiHalfTemplate>

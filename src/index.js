@@ -11,7 +11,7 @@ import { ThemeProvider } from 'styled-components'
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <GlobalStyle />
-    <App />,
+    <App />
   </ThemeProvider>,
   document.getElementById('root')
 )
