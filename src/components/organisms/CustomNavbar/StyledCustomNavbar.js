@@ -32,4 +32,18 @@ export default styled(Navbar)`
       margin-right: 5em;
     }
   }
+
+  .links > * {
+    margin-right: 4em;
+    padding: 0.3em 0.5em;
+    text-decoration: none;
+    color: ${(props) => props.theme.text.color};
+    border-radius: 3px;
+
+    &:hover,
+    &.selected {
+      background-color: ${(props) => props.theme.palette.secondary[0]};
+      color: white;
+    }
+  }
 `

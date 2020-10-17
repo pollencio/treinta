@@ -5,6 +5,7 @@ import { auth } from 'services/firebase'
 // Pages
 import Home from 'components/pages/Home'
 import Login from 'components/pages/Login'
+import Map from 'components/pages/Map'
 
 // Components
 import CustomNavbar from 'components/organisms/CustomNavbar'
@@ -41,6 +42,7 @@ function App() {
 
       <Switch>
         <PrivateRoute exact path='/' component={Home} />
+        <PrivateRoute exact path='/map' component={Map} />
         <PublicRoute exact path='/login' component={Login} />
       </Switch>
     </BrowserRouter>
