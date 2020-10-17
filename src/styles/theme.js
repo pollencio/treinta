@@ -15,7 +15,7 @@ theme.title = {
 theme.text = {
   lineHeight: '1.5em',
   color: palette.gray[1],
-  fontSize: '18px',
+  fontSize: '16px',
   fontFamily: 'Segoe UI, Roboto, sans-serif',
 }
 

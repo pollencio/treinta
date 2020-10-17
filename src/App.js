@@ -30,7 +30,7 @@ function App() {
   ) : (
     <BrowserRouter>
       <Switch>
-        <PrivateRoute exact path='/' component={Login} />
+        <PrivateRoute exact path='/' component={Home} />
         <PublicRoute exact path='/login' component={Login} />
       </Switch>
     </BrowserRouter>

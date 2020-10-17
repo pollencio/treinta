@@ -2,26 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import Icon from 'components/atoms/Icon'
 import StyledInput from './StyledInput'
-import Select from './Select'
-import DatePicker from './DatePicker'
 
 function Input(props) {
-  const { id, icon, type, label } = props
+  const { id, icon, label } = props
 
   return (
     <InputWrapper icon={icon}>
       {label && <label htmlFor={id}>{label}</label>}
 
-      {type === 'select' ? (
-        // Select Input
-        <Select {...props} />
-      ) : type === 'date' ? (
-        // Date Input
-        <DatePicker {...props} />
-      ) : (
-        // The rest of Inputs
-        <StyledInput {...props} />
-      )}
+      <StyledInput {...props} />
       {icon && <Icon className='input-icon' icon={icon} />}
     </InputWrapper>
   )

@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { authCards, authErrorTranslation } from 'constants/auth'
 
 // import components
+import AuthForm from 'components/organisms/AuthForm'
 import SemiHalfTemplate from 'components/templates/SemiHalfTemplate'
 
 // images
@@ -10,7 +12,13 @@ const rightImgPath = '/img/graphics/login.png'
 function Login() {
   return (
     <SemiHalfTemplate>
-      <Left className='left'>Login</Left>
+      <Left className='left'>
+        <AuthForm
+          initCard='login'
+          cards={authCards}
+          errorTranslation={authErrorTranslation}
+        />
+      </Left>
 
       <Right className='right' />
     </SemiHalfTemplate>
