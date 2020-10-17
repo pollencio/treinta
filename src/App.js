@@ -6,8 +6,12 @@ import { auth } from 'services/firebase'
 import Home from 'components/pages/Home'
 import Login from 'components/pages/Login'
 
+// Components
+import CustomNavbar from 'components/organisms/CustomNavbar'
+
 function App() {
   const [user, setUser] = useState(undefined)
+  const { currentUser } = auth
 
   auth.onAuthStateChanged((user) => {
     if (user) {
@@ -29,6 +33,12 @@ function App() {
     'Cargando ...'
   ) : (
     <BrowserRouter>
+      <Switch>
+        <Route
+          render={(props) => <CustomNavbar user={currentUser} {...props} />}
+        />
+      </Switch>
+
       <Switch>
         <PrivateRoute exact path='/' component={Home} />
         <PublicRoute exact path='/login' component={Login} />
