@@ -20,7 +20,7 @@ const CustomNavbar = (props) => {
 
   return (
     <>
-      <StyledCustomNavbar fixed={path === '/login'} path={path}>
+      <StyledCustomNavbar fixed={path !== '/map'} path={path}>
         <div className='navbar-left'>
           <Link to='/'>
             <Logo size='small' />
