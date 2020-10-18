@@ -9,6 +9,7 @@ import Map from 'components/pages/Map'
 
 // Components
 import CustomNavbar from 'components/organisms/CustomNavbar'
+import Credits from 'components/organisms/Credits'
 
 function App() {
   const [user, setUser] = useState(undefined)
@@ -45,6 +46,11 @@ function App() {
         <PrivateRoute exact path='/map' component={Map} />
         <PublicRoute exact path='/login' component={Login} />
       </Switch>
+
+      <Credits>
+        Todos los derechos reservados - Diseñado y desarrollado por Yeliana
+        Torres
+      </Credits>
     </BrowserRouter>
   )
 }
