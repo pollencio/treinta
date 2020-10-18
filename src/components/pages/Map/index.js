@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import actions from 'services/actions'
 import { dataRef } from 'services/firebase'
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react'
+import mapCustomStyles from 'constants/mapStyles'
 
 // components
 import Spinner from 'components/atoms/Spinner'
@@ -37,6 +38,10 @@ function MapContainer(props) {
     })
   }
 
+  const _mapLoaded = (mapProps, map) => {
+    map.setOptions({ styles: mapCustomStyles })
+  }
+
   return (
     <StyledMapContainer>
       <h3 className='title'>
@@ -46,10 +51,11 @@ function MapContainer(props) {
 
       <Map
         google={props.google}
-        zoom={8}
+        zoom={11.52}
         style={mapStyles}
-        initialCenter={{ lat: 47.444, lng: -122.176 }}
-        onClick={handleMapClick}>
+        initialCenter={{ lat: 4.6417302, lng: -74.0994751 }}
+        onClick={handleMapClick}
+        onReady={(mapProps, map) => _mapLoaded(mapProps, map)}>
         {displayMarkers()}
       </Map>
     </StyledMapContainer>
@@ -62,14 +68,14 @@ const StyledMapContainer = styled.div`
     z-index: 1000;
     background-color: white;
     padding: 0.5em 1em;
-    bottom: 2em;
-    left: 3em;
+    bottom: 2.5em;
+    left: 0.5em;
   }
 `
 
 const mapStyles = {
   width: '100%',
-  height: '100vh',
+  height: 'calc(100vh - 7em)',
 }
 
 const LoadingContainer = () => <Spinner type={2} color='primary' />
