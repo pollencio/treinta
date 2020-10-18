@@ -27,9 +27,15 @@ export const authCards = {
     subtitle: 'Crea tu cuenta en Treinta para comenzar a usar sus servicios',
     action: 'Registrarme',
     fields: {
+      // name: {
+      //   label: 'Nombre',
+      //   placeholder: 'Sandra Torres Pérez',
+      //   type: 'text',
+      //   required: true,
+      // },
       email: {
         label: 'Correo electrónico',
-        placeholder: 'micorreo@email.com',
+        placeholder: 'sandra@email.com',
         type: 'email',
         required: true,
       },

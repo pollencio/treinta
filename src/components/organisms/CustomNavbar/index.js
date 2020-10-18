@@ -20,7 +20,7 @@ const CustomNavbar = (props) => {
 
   return (
     <>
-      <StyledCustomNavbar path={path}>
+      <StyledCustomNavbar fixed={path === '/login'} path={path}>
         <div className='navbar-left'>
           <Link to='/'>
             <Logo size='small' />
@@ -29,10 +29,10 @@ const CustomNavbar = (props) => {
 
         <div className='navbar-right'>
           <div className='links'>
-            <Link to='/' className={path === '/' && 'selected'}>
+            <Link to='/' className={path === '/' ? 'selected' : ''}>
               ¿Qué es Treinta?
             </Link>
-            <Link to='/map' className={path === '/map' && 'selected'}>
+            <Link to='/map' className={path === '/map' ? 'selected' : ''}>
               Mapa de negocios
             </Link>
           </div>

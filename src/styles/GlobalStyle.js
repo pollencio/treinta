@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`${(props) => `
     line-height: ${props.theme.text.lineHeight};
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
-    overflow-x: auto;
+    overflow: hidden;
   }
 
   // ---------- TITLES ----------- //

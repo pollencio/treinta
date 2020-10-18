@@ -8,7 +8,7 @@ firebase.initializeApp(FirebaseConfig)
 
 // Export database references
 const db = firebase.firestore()
-export const usersRef = db.collection('users')
+export const dataRef = db.collection('data')
 
 // Export auth reference
 export const auth = firebase.auth()
