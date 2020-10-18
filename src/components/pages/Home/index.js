@@ -6,13 +6,13 @@ import SemiHalfTemplate from 'components/templates/SemiHalfTemplate'
 import Screenshot from 'components/atoms/Screenshot'
 
 // screenshots
-const screenshot = '/img/screenshots/1.jpeg'
+const screenshotUrl = '/img/screenshots/1.jpeg'
 
 function Home() {
   return (
     <StyledHome>
       <div className='left'>
-        <Screenshot imgUrl={screenshot} />
+        <Screenshot imageUrl={screenshotUrl} alt='Treinta app screenshot' />
       </div>
 
       <div className='right'>
