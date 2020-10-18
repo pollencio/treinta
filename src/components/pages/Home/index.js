@@ -6,7 +6,7 @@ import SemiHalfTemplate from 'components/templates/SemiHalfTemplate'
 import Screenshot from 'components/atoms/Screenshot'
 
 // screenshots
-const screenshotUrl = '/img/screenshots/1.jpeg'
+const screenshotUrl = '/img/screenshots/2.jpeg'
 
 function Home() {
   return (
