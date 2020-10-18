@@ -28,20 +28,22 @@ const CustomNavbar = (props) => {
         </div>
 
         <div className='navbar-right'>
-          <div className='links'>
-            <Link to='/' className={path === '/' ? 'selected' : ''}>
-              ¿Qué es Treinta?
-            </Link>
-            <Link to='/map' className={path === '/map' ? 'selected' : ''}>
-              Mapa de negocios
-            </Link>
-          </div>
-
           {user ? (
-            <ProfileButton
-              nickname={user.displayName}
-              onClick={() => setMenuOpened(!menuOpened)}
-            />
+            <>
+              <div className='links'>
+                <Link to='/' className={path === '/' ? 'selected' : ''}>
+                  ¿Qué es Treinta?
+                </Link>
+                <Link to='/map' className={path === '/map' ? 'selected' : ''}>
+                  Mapa de negocios
+                </Link>
+              </div>
+
+              <ProfileButton
+                nickname={user.displayName}
+                onClick={() => setMenuOpened(!menuOpened)}
+              />
+            </>
           ) : (
             path !== '/login' && (
               <Button as={Link} to='/login'>
