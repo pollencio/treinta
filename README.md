@@ -4,7 +4,7 @@ Treinta-test is a web app designed and developed by Yeliana Torres as a developm
 
 ## The company
 
-[Treinta](https://www.treinta.co/) company is a mobile app startup for Colombian and Mexican small buissinesses who want to record their transactions easy and using the smartphone.
+[Treinta](https://www.treinta.co/) company is a financial startup for Colombian and Mexican small buissinesses who want to record their transactions easily by using their smartphones.
 
 ![Editor example](public/img/demo.gif)
 
@@ -41,4 +41,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 `npm deploy`
 
 Builds and deploy the app to the firebase hosting.<br>
-Open [https://treinta-test.web.app/login](https://treinta-test.web.app/login) to view it in the browser.
+Open [https://treinta-test.web.app](https://treinta-test.web.app) to view it in the browser.
